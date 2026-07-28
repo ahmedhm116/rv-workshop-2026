@@ -25,7 +25,7 @@ By the end of this workshop, you will be able to:
 
 ---
 
-### 🏗️ Workshop Structure (10 Hours)
+### 🏗️ Workshop Structure (7 Hours)
 
 #### ⌛ Session Breakdown
 

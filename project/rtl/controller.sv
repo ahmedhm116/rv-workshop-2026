@@ -100,6 +100,20 @@ module control (
                     alu_src = 1'b0;   // ALU source is register
                     alu_control = 4'b0001; // SUB for comparison
                 end
+
+                7'b1101111: begin // JAL
+                    jump = 1'b1;
+                    reg_write = 1'b1;
+                    imm_src = 3'b011; // J-type immediate
+                    result_src = 1'b0; // Result comes from ALU (PC + 4)
+                end
+
+                7'b0110111: begin // LUI
+                    reg_write = 1'b1;
+                    imm_src = 3'b100; // U-type immediate
+                    alu_src = 1'b1;   // ALU source is immediate
+                    alu_control = 4'b0000; // ADD for loading immediate
+                end
             // I-type (0010011)
             // Load (0000011)
             // Store (0100011)
